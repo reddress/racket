@@ -7,4 +7,4 @@
      (send (send ed get-keymap) call-function
            command ed evt #t))))
 
-(rebind "c:e" "shift-focus")
+(rebind "c:d" "shift-focus")
