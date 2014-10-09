@@ -1,3 +1,5 @@
 htdp.org 1st edition
 
 7 oct 2014 Section 12
+8 oct 2014 Section 15
+9 oct 2014 Section 21

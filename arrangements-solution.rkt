@@ -1,0 +1,29 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname arrangements-solution) (read-case-sensitive #t) (teachpacks ((lib "draw.rkt" "teachpack" "htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "draw.rkt" "teachpack" "htdp")))))
+(define (arrangements a-word)
+  (cond
+    ((empty? a-word) (list empty))
+    (else (insert-everywhere/all-words (first a-word)
+                                       (arrangements (rest a-word))))))
+
+(define (insert-everywhere/all-words letter lo-words)
+  (cond
+    ((empty? lo-words) empty)
+    (else (append (insert-everywhere letter (first lo-words))
+                  (insert-everywhere/all-words letter (rest lo-words))))))
+
+(define (insert-everywhere a-letter a-word)
+  (cond
+    ((empty? a-word) (list (list a-letter)))
+    (else (cons (cons a-letter a-word)
+                (add-at-beginning (first a-word)
+                                  (insert-everywhere a-letter (rest a-word)))))))
+
+(define (add-at-beginning a-letter lo-words)
+  (cond
+    ((empty? lo-words) empty)
+    (else (cons (cons a-letter (first lo-words))
+                (add-at-beginning a-letter (rest lo-words))))))
+
+(insert-everywhere 'z (list 'a 'b 'c))
