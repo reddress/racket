@@ -5,3 +5,4 @@ htdp.org 1st edition
 9 oct 2014 Section 21
 10 oct 2014 Section 21.5
 13 oct 2014 Section 22.2
+14 oct 2014 Section 23.4
