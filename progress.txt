@@ -12,3 +12,4 @@ htdp.org 1st edition
 18 oct 2014 Section 37
 19 oct 2014 Section 39
 20 oct 2014 Section 41
+21 oct 2014 Epilogue
